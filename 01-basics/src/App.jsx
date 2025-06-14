@@ -11,7 +11,7 @@ function App() {
             fontSize:"32px",
             fontFamily:"Verdana"
           }}>Goodbye World</h2>
-          <p>Your lucky number today is {luckyNumber}</p>
+          <p className="urgent">Your lucky number today is {luckyNumber}</p>
           {/* This is for images saved in the ./src folder */}
           <img src={waffle} style={{width:"50%"}}/>
           {/* If the image is hosted elsewhere, not with the app, then the URL will suffice */}
