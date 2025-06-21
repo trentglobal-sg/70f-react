@@ -20,7 +20,7 @@ export default function App() {
 
   const renderBMI = () => {
     if (height >= 1) {
-      return weight / height ** 2;  // <-- calculate the BMI when we need it
+      return Number(weight) / Number(height) ** 2;  // <-- calculate the BMI when we need it
     } else {
       return 0;
     }
@@ -30,7 +30,10 @@ export default function App() {
     <h1>BMI Calculator</h1>
     <div>
       <label>Weight:</label>
-      <input type="text" value={weight} onChange={updateWeight} />
+      <input type="number" value={weight} onChange={updateWeight} />
+      {
+        weight < 0 ? <div>Error: Weight cannot be lesser than 0</div>: null
+      }
     </div>
     <div>
       <label>Height:</label>
@@ -66,6 +69,7 @@ export default function App() {
     {
       submitted && <div>BMI = {renderBMI()}</div>
     }
+
 
     <button onClick={() => {
       setSubmitted(true);
