@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react"
 
 export default function App() {
@@ -8,6 +9,8 @@ export default function App() {
   const [age, setAge] = useState('1')
   const [submitted, setSubmitted] = useState(false)
   const [units, setUnits] = useState("metric");
+  const [bmi, setBmi] = useState(0);
+
 
   // const [bmi, setBmi] = useState(0); // <-- derived values not a good candidate for a state
 
