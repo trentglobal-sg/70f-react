@@ -36,7 +36,13 @@ export default function App() {
           // add the new guest to the guests array
           setGuests([...guests, newGuest])
 
-          // setGuests[...newGuest, guests]
+          // Add to front of array
+          // setGuests[newGuest, ...guests]
+
+          // If want to insert at index N of array
+          // const lhs = guests.slice(0, N);
+          // const rhs = guests.slice(N)
+          // const cloned = [...lhs, newGuest, ...rhs];
 
         }
         }
